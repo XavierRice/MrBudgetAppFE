@@ -1,0 +1,120 @@
+.budget,
+.mr {
+  position: relative;
+  display: inline-block;
+  width: 49px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.budget {
+  color: #6f23ed;
+  width: 126px;
+}
+.frame-wrapper,
+.mr-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mr-parent {
+  flex: 1;
+}
+.frame-wrapper {
+  width: 175px;
+}
+.home1 {
+  position: relative;
+}
+.index2 {
+  color: #8da8db;
+}
+.about1,
+.div1,
+.index2 {
+  position: relative;
+}
+.div1 {
+  color: #12dd3f;
+}
+.about1 {
+  color: rgba(178, 0, 222, 0.95);
+  text-align: center;
+}
+.navbar1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.frame-parent,
+.navbar-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-wrapper {
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  padding: 8.904444694519043px;
+  box-sizing: border-box;
+  text-align: left;
+  color: #1e1e1e;
+}
+.frame-parent {
+  background-color: #e3e679;
+  width: 734.4px;
+  flex-direction: row;
+  padding: 11.212103843688965px;
+}
+.frame-parent,
+.home-page,
+.home-page-inner {
+  display: flex;
+  box-sizing: border-box;
+}
+.home-page-inner {
+  align-self: stretch;
+  height: 99.4px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+}
+.home-page {
+  background-color: #fff;
+  width: 834px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 26px 0;
+  text-align: center;
+  font-size: 32.06px;
+  color: #e72ed4;
+  font-family: "Irish Grover";
+}
+@media screen and (max-width: 1200px) {
+  .navbar1 {
+    flex-direction: row;
+    gap: 44px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 960px) {
+  .navbar1 {
+    flex-direction: row;
+    gap: 44px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 420px) {
+  .navbar1 {
+    flex-direction: row;
+    gap: 44px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

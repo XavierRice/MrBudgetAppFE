@@ -1,0 +1,17 @@
+.medium-rectangle {
+    width: 60%; /* Make the image take the full width of its container */
+    max-width: 600px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent extra space beneath the image */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  
+  .Home{
+    padding-bottom: 80px
+  }
+
+  .h2{
+
+    padding-bottom: 80px
+  }

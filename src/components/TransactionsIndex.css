@@ -1,0 +1,15 @@
+
+
+.container {
+    min-height: 100vh; /* Set a minimum height to fill the viewport */
+    padding-bottom: 60px; /* Adjust the padding to be the same height as the footer */
+    position: relative; /* Ensure the body's position is relative */
+}
+
+.small-grey-card {
+    background-color: rgb(83, 159, 225);
+    color: darkslategrey;
+    height: 150px; /* Set custom height for smaller cards */
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,6 @@
+footer {
+    position: absolute; /* Set the footer's position to absolute */
+    bottom: 0; /* Stick it to the bottom */
+    width: 100%; /* Make it span the full width */
+    height: 60px; /* Set the height of your footer */
+}
