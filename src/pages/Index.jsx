@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TransactionsIndex from "../components/transactionsIndex";
+import TransactionsIndex from "../components/TransactionsIndex";
 
 
 function Index(props) {
