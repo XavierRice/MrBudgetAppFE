@@ -3,7 +3,7 @@ WELCOME TO THE MR.BUDGETAPP FOR PURSUIT 10.1
 
 Mr. Budget is an app where imaginary people can log their financial transactions! Utlizing JS, React Libary, Express and RESTful routes!
 
-You can find both front-end deployment and the back-end applications github and depoylment at #LINK#. 
+You can find both front-end deployment at [https://mrbudgetappx.netlify.app/] and the back-end applications github and depoylment at #LINK#. 
 I take an iterative and incremental approach to projects. If you are intrested in my development process check out my Trello board [https://trello.com/b/w2hcyMq9/budget-app].
 
 Features
