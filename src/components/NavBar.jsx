@@ -5,7 +5,7 @@ import "./NavBar.css";
 
 // USE EFFECT
 const StyledH4 = styled.h4`
-color: ${props => (props.totalamount <= 1700 ? "red" : props.totalamount <= 12000 ? "purple" : "green"   )};
+color: ${props => (props.totalAmount <= 1700 ? "red" : props.totalAmount <= 12000 ? "purple" : "green"   )};
 text-align: center;
 font-size:29px;
 `;
@@ -25,7 +25,7 @@ const NavBar = (props) => {
               <div className="mr">Mr.</div>
               <div className="budget">Budget</div>
             </div>
-           <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4>
+           {/* <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> */}
           </div>
           <div className="navbar-wrapper">
             <div className="navbar1">
