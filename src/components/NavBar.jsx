@@ -17,18 +17,14 @@ const NavBar = (props) => {
   useEffect( ()=> {}, [totalAmount])
 
   return (
-    <div className="home-page">    {/* I made this in figma and locify. I enjoy the app and im learning to use it */}
-      <div className="home-page-inner">
-        <div className="frame-parent">
-          <div className="frame-wrapper">
+    <div className="navbar-container">    {/* I made this in figma and locify. I enjoy the app and im learning to use it */}
+      <div className="navbar">
             <div className="mr-parent">
               <div className="mr">Mr.</div>
               <div className="budget">Budget</div>
             </div>
-           {/* <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> */}
           </div>
-          <div className="navbar-wrapper">
-            <div className="navbar1">
+          <div className="links">
             <Link to="/" className="homeLink">
               <div className="home1">Home</div>
               </Link>
@@ -39,11 +35,10 @@ const NavBar = (props) => {
               <div className="about1">Form</div>
               </Link>
             </div>
+            {/* <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> */}
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default NavBar;
+ /* <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> */
