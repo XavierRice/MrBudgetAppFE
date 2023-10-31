@@ -35,7 +35,7 @@ const NavBar = (props) => {
               <div className="about1">Form</div>
               </Link>
             </div>
-            {/* <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> */}
+            <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> 
           </div>
   );
 };
