@@ -11,8 +11,14 @@ font-size:29px;
 `;
 
 
+
 const NavBar = (props) => {
   const {totalAmount} = props;
+
+  localStorage.setItem('totalAmount', totalAmount);
+
+  let retrievedTotal = localStorage.getItem('totalAmount');
+  let rT = parseInt(retrievedTotal, 10)
 
   useEffect( ()=> {}, [totalAmount])
 
@@ -36,6 +42,7 @@ const NavBar = (props) => {
               </Link>
             </div>
             <StyledH4 totalAmount={totalAmount}>{totalAmount}</StyledH4> 
+            
           </div>
   );
 };
