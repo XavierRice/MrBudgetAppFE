@@ -10,7 +10,7 @@ const EditFormV2 = ({ transactionArr }) => {
     const [nameError, setNameError] = useState("")
     const [transaction, setTransaction] = useState({
         transaction_name: "",
-        amount: 0,
+        amount: "",
         date: "",
         from: "",
         category: ""
@@ -52,6 +52,10 @@ const EditFormV2 = ({ transactionArr }) => {
         });
     }
 
+        setTimeout( ()=>{
+            setAmountError("");
+            setNameError("");
+        }, 5000)
 
     const handleSubmit = async (event) => {
         event.preventDefault();

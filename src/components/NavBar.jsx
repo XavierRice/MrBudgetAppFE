@@ -17,8 +17,8 @@ const NavBar = (props) => {
 
   localStorage.setItem('totalAmount', totalAmount);
 
-  let retrievedTotal = localStorage.getItem('totalAmount');
-  let rT = parseInt(retrievedTotal, 10)
+  // let retrievedTotal = localStorage.getItem('totalAmount');
+  // let rT = parseInt(retrievedTotal, 10)
 
   useEffect( ()=> {}, [totalAmount])
 

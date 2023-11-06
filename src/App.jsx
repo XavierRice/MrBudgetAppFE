@@ -14,8 +14,7 @@ import NavBar from "./components/NavBar";
 import NewForm from "./components/NewForm";
 import Footer from "./components/Footer";
 import BarChart from "./components/BarChart";
-//import Header from "./components/Header";
-//import EditFormV2 from "./components/EditFormV2";
+
 
 function App() {
 
@@ -24,10 +23,15 @@ function App() {
   const [storedTransactions, setStoredTrans] = useState([])
 
  useEffect(() => {
-  setStoredTrans(localStorage.setItem("transactions", transactionArr ))
-  console.log(storedTransactions)
- }, [transactionArr])
+  localStorage.setItem("transactions", JSON.stringify(transactionArr) )
+ }, [])
  
+ useEffect(()=>{
+ const jsonStringofItems = localStorage.getItem("transactions");
+ setStoredTrans(JSON.parse(jsonStringofItems))
+ }, [])
+
+ console.log(storedTransactions)
   return (
     
     <div className="App">
@@ -46,5 +50,3 @@ function App() {
 
 export default App;
 
-//<Header totalAmount={totalAmount}/>
-//<Route path="/transactions/chart" element={<BarChart transactionArr={transactionArr} />} />
