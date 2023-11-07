@@ -7,7 +7,7 @@ const EditFormV2 = ({ transactionArr }) => {
     const navigate = useNavigate();
 
     const [amountError, setAmountError] = useState("")
-    const [nameError, setNameError] = useState("")
+    const [nameError, setNameError] = useState(false)
     const [transaction, setTransaction] = useState({
         transaction_name: "",
         amount: "",
@@ -15,25 +15,35 @@ const EditFormV2 = ({ transactionArr }) => {
         from: "",
         category: ""
     } || transaction)
+    
+    useEffect(() =>{
+        if(!transaction.transaction_name){
+            setNameError(true)
+        }else{
+            setNameError(false)
+        }
+
+    }, [transaction.transaction_name ])
 
     useEffect(() => {      //I was getting some issues with resolving to the DOM so i tried a use Effect so that i would load first.
         const transactionToEdit = transactionArr.find(transId => transId.id === parseInt(id))  // so im turning the id into a number here.
         setTransaction(transactionToEdit)
     }, [id]);
 
+
     function handleTextChange(event) {
         const value = event.target.id
 
         if (value === "transaction_name") {
             const transactionName = event.target.value
-            if (transactionName.trim() == "") {
-                setNameError("You have to enter a name")
-            } else {
+            // if (transactionName.trim() == "") {
+            //     setNameError(true)
+            // } else {
                 setTransaction({
                     ...transaction,
                     [value]: transactionName.trim()
                 });
-            }
+            // }
         };
         if (value === "amount") {
             let numberAmount = parseFloat(event.target.value)
@@ -42,7 +52,7 @@ const EditFormV2 = ({ transactionArr }) => {
             } else {
                 setTransaction({
                     ...transaction,
-                    [value]: transactionName.trim()
+                    [value]: numberAmount
                 });
             }
         }
@@ -52,10 +62,10 @@ const EditFormV2 = ({ transactionArr }) => {
         });
     }
 
-        setTimeout( ()=>{
-            setAmountError("");
-            setNameError("");
-        }, 5000)
+        // setTimeout( ()=>{
+        //     setAmountError("");
+        //     setNameError("");
+        // }, 5000)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -103,12 +113,12 @@ const EditFormV2 = ({ transactionArr }) => {
                             required
                         />
                         <hr></hr>
-                        {nameError != "" && <div className='error-message'>{nameError}</div>}
+                        {nameError && <div className='error-message'>NEEDS NAME</div>}
                         <hr></hr>
                         <input
                             className='form-control'
                             name="amount"
-                            type="text"
+                            type="number"
                             id={"amount"}
                             min={.01}
                             value={transaction.amount}
@@ -116,7 +126,7 @@ const EditFormV2 = ({ transactionArr }) => {
                             required
                         />
                         <hr></hr>
-                        {amountError != "" && <div className='error-message'>{amountError}</div>}
+                        {amountError && <div className='error-message'>{amountError}</div>}
                         <hr></hr>
                         <input
                             className='form-control'
