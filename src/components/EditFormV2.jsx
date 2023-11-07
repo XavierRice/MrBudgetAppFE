@@ -6,7 +6,7 @@ const EditFormV2 = ({ transactionArr }) => {
     const { id } = useParams();  // this returns the id as a string which i always forget
     const navigate = useNavigate();
 
-    const [amountError, setAmountError] = useState("")
+    const [amountError, setAmountError] = useState(false)
     const [nameError, setNameError] = useState(false)
     const [transaction, setTransaction] = useState({
         transaction_name: "",
@@ -22,8 +22,13 @@ const EditFormV2 = ({ transactionArr }) => {
         }else{
             setNameError(false)
         }
+        if(!transaction.amount){
+            setAmountError(true)
+        }else{
+            setAmountError(false)
+        }
 
-    }, [transaction.transaction_name ])
+    }, [transaction.transaction_name, transaction.amount])
 
     useEffect(() => {      //I was getting some issues with resolving to the DOM so i tried a use Effect so that i would load first.
         const transactionToEdit = transactionArr.find(transId => transId.id === parseInt(id))  // so im turning the id into a number here.
@@ -126,7 +131,7 @@ const EditFormV2 = ({ transactionArr }) => {
                             required
                         />
                         <hr></hr>
-                        {amountError && <div className='error-message'>{amountError}</div>}
+                        {amountError && <div className='error-message'>Amount has got to be money of some kind</div>}
                         <hr></hr>
                         <input
                             className='form-control'
